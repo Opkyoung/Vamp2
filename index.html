@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="animate.css">
+<script src="wow.min.js"></script>
+<script>
+	new WOW().init();
+</script>
+	<title>뱀파이어</title>
+	<style type="text/css">
+		@font-face{
+			src: url("../font/smdinaru.otf");
+			font-family: "smdinaru";
+		}
+		@font-face{
+			src: url("../font/sm3kgothic.otf");
+			font-family: "sm3kgothic";
+		}
+		@font-face{
+			src: url("../font/smkm.otf");
+			font-family: "smkm";
+		}
+
+
+		html, body, p, div, section,h2,h1,header,h3,h4,hr,h5{margin: 0; padding: 0;  scroll-behavior: smooth;}
+		header{background: black; opacity: 75%; color: white;  display: block; position: fixed; width: 100%; top:0%; z-index: 3; font-weight: normal;}
+		h1{font-family: sm3kgothic; font-size: 3em; letter-spacing: -0.05em;font-weight: normal;}
+		h2{font-family: sm3kgothic; font-size: 2.2em; letter-spacing: -0.05em;font-weight: normal;}
+		h3{font-family: smdinaru; font-size: 1.5em; letter-spacing: -0.04em;font-weight: normal;}
+		h4{font-family: smkm; font-size: 1.5em; letter-spacing: -0.03em; font-weight: normal; line-height: 1.5;}
+		h5{font-family: sm3kgothic; font-size: 1.3em; letter-spacing: -0.03em; font-weight: normal; line-height: 1.5;}
+		p{font-family: smkm; font-size: 1.2em; letter-spacing: -0.03em; font-weight: normal; line-height: 1.5; margin-top: 130px; padding-bottom: 30px; text-align:right; text-decoration:none; color:black;  }
+		a{text-decoration: none}
+		hr {border: none;height: 2px;background-color: black;width: 1040px;}
+		span { border-bottom: 2px solid black;}
+		img{mix-blend-mode: multiply;}
+
+
+		.header-title{font-size: 1.5em; padding: 8px; margin-left: 10px; font-family: smdinaru;font-weight: normal; }
+		.section1{background: #f9d1d1}
+		.wrapper1{margin: auto; text-align:center; width:100%; height:400px;background: #202020; }
+		.choose{padding-top: 200px; color: white; animation: blink 0.8s linear infinite alternate;}
+		.wrapper2{width: 1040px; height: 1200px;margin: auto; display: flex}
+		.wrapper2h1{padding-top: 200px; }
+		.text{display: block; width: 500px; animation: fade-in-left 3s easy-in-out forwards;}
+		.imgwrapper{padding-top: 200px; display: flex; width: }
+		.img01{width: 550px; height: 700px; background: lightgray; left: 0; }
+		.wrapper3{margin:auto;width: 1040px; height: 750px}
+		.graycircle{width: 500px; height: 520px; border: 2px solid black; border-radius: 50%; background-color: lightgray; margin: auto; text-align: center;animation: float 1s ease-in-out infinite alternate; }
+		.graycircletext{padding-top: 140px}
+		.wrapper4{width: 1040px; margin: auto; border-bottom: 2px solid black;}
+		.boxes{display: flex; margin-top: 100px;bottom: 0;justify-content: center; }
+		.boxall{ border: 2px solid black; background: #FFF1F1; margin: 0px 20px; border-bottom: 0px}
+		.boxtext{padding: 15px;}
+		.box1{width: 180px; height: 230px; margin-left: 0; margin-top: 70px; transition: all 0.3s ease;}
+		.box1:hover{transform: translateY(-30px); rotate:-10deg;}
+		.box2{width: 220px; height: 300px;transition: all 0.3s ease;}
+		.box2:hover{transform: translateY(-30px); rotate:-10deg;}
+		.box3{width: 210px; height: 250px; margin-top: 50px;transition: all 0.3s ease;}
+		.box3:hover{transform: translateY(-30px); rotate:-10deg;}
+		.box4{width: 210px; height: 260px; margin-right: 0; transition: all 0.3s ease;margin-top: 40px}
+		.box4:hover{transform: translateY(-30px); rotate:-10deg;}
+		.wrapper5{width: 1040px; height: 300px}
+		.wrapper6{margin:auto;width: 1040px; height: 1050px; position: relative;}
+		.wrapper6box{border: 2px solid black; margin: 0px; padding: 0px;}
+		.htbb1{width: 850px; height: 460px; margin: auto; position: absolute; top:170px; z-index: 0}
+		.htbb2{width: 850px; height: 250px; margin: auto; position: absolute; top:630px; z-index: 0}
+		.wrapper7{margin: auto; width: 1040px; }
+		.htbb3{width: 600px; height:400px;}
+		.htbb4{width: 600px; height: 150px;border-top: 0px;}
+		.htbb5{width: 400px; height:400px;}
+		.htbb6{width: 400px; height: 150px;border-top: 0px;}
+		.htbb7{width: 500px; height:400px; margin: auto;}
+		.htbb8{width: 500px; height: 150px;border-top: 0px; margin: auto;}
+
+		.section2{background: lightgray;}
+		.wrapper8{width: 1040px; height: auto; margin: auto}
+		.pink-q-box{width: 700px; height: 150px; border: 2px solid black; background:#f9d1d1;}
+		.qna-text{text-align: center; font-size: 1.7em;letter-spacing: -0.03em; line-height: 1.7}
+		.qna-box{width: 750px; height: 550px; background: white; border: 2px solid black; border-radius: 50px}
+
+
+		.section3{background: #202020}
+		.wrapperitem{width: 1040px; height: auto; margin: auto; display: flex; position: relative;}
+		.itemtitle{width: 200px; margin: 0; margin-block-end: 0}
+		.item-container{display: flex; flex-direction: column;}
+		.pinkitembox{width: 780px; height: 450px; background:#f9d1d1; margin-top:165px;border:2px solid black; border-bottom: 0px solid black;border-top-left-radius: 30px 30px;
+ 		 	border-top-right-radius: 30px 30px;
+  			border-bottom-left-radius: 0px 0px;
+  			border-bottom-right-radius: 0px 0px;}
+		.grayitembox{width: 780px; height: 150px; background:lightgray;  margin-top:0; border:2px solid black;  }
+		.tooth{margin: auto; text-align: center; padding: 10px 0px}
+		.tooth2{text-align: center}
+		.pagebutton1{width: 50px; height: 50px; border-radius: 50%; background:lightgray; filter: drop-shadow(1px 1px 3px gray); text-align: center; font-size: 2em; opacity: 80%; position: absolute; top: 50%; margin: 0px 10px}
+		.pagebutton2{width: 50px; height: 50px; border-radius: 50%; background:lightgray; filter: drop-shadow(1px 1px 3px gray); text-align: center; font-size: 2em; opacity: 80%; position: absolute; top: 50%; right:0; margin-right:40px; transform: scaleX(-1)}
+		.section4{background: #f9d1d1}
+		.wrapper9{width: 1040px; height: auto; margin: auto}
+		.letter{margin: 0px 20px; width: 100%;  height: 100%;mix-blend-mode: normal;}
+		.letter2{mix-blend-mode: normal;}
+		.letter1{display: inline-block; background:url('./letter.png') no-repeat;}
+		.letter1:hover{background: url(./letter2.png) no-repeat;}
+
+
+		
+
+
+
+		.noleftborder{border-left: 0px solid black;}
+		.leftaline{text-align: left; left: 0;}
+		.middlealine{margin: auto; justify-content: center; text-align: center;}
+		.flex{display: flex}
+		.glyph{font-size: 4em; padding-top: 0px}
+		.absolute{position: absolute; left: 32.35%}
+		.whitetext{color: white;}
+		.paddingtop25{padding-top: 25px;}
+		.paddingtop30{padding-top: 30px}
+		.paddingtop50{padding-top: 50px}
+		.paddingtop100{padding-top: 100px}
+		.paddingtop150{padding-top: 150px}
+		.border-radius-box-top{border-top-left-radius: 30px 30px;
+ 		 	border-top-right-radius: 30px 30px;
+  			border-bottom-left-radius: 0px 0px;
+  			border-bottom-right-radius: 0px 0px; border: 2px solid black; background: white; border-bottom: 2px solid black;}
+  		.border-radius-box-bottom{border-top-left-radius: 0px 0px;
+ 		 	border-top-right-radius: 0px 0px;
+  			border-bottom-left-radius: 30px 30px;
+  			border-bottom-right-radius: 30px 30px; border: 2px solid black; background: lightgray; }
+		.z-index1{z-index: 1}
+		.bottomline{border-bottom: 2px solid black;}
+		.nomargin{margin: 0; padding: 0}
+		.margin-side{margin: 0px 70px;}
+		.no-animation{transition: none; transform: none; animation: none;pointer-events: none;}
+
+		
+@keyframes blink {
+		from{opacity: 0.3}		
+		to{opacity: 1} 
+	}
+
+@keyframes float{
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, -25px);
+  }
+}
+@keyframes fade-in-left {
+	0%{opacity: 0; transform: translateX(-20px);}
+	100%{opacity: 1; transform: translateX(0);}
+}
+
+
+
+	</style>
+</head>
+<body>
+	<header>
+		<div class="header-title">당신은 특별합니다</div>
+	</header>
+	<section class="section1">
+		<div class="wrapper1">
+			<h2 class="choose">
+				뱀파이어를 선택하셨군요!
+			</h2>
+		</div>
+		<div class="wrapper2">
+			<div class="text wow fadeInLeft" data-wow-delay="0.5s">
+				<h1 class="wrapper2h1">음음, 좋은 선택이에요</h1>
+				<h3 style="padding-top: 20px;">뱀파이어는 멋진 점이 정말 많죠.<br>수려한 외모, 얼음 같은 분위기,<br>게다가 인간의 마음을 조종하는<br>초능력까지!<br><br>두근두근, 빨리 뱀파이어가<br>되어보고 싶지 않나요?<br>저희가 어서 그 꿈을<br>이뤄드릴게요!</h3>
+			</div>
+			<div class="imgwrapper">
+			<img src="img01.png" style="width:700px; height: 629px; position:absolute; right:150px" class="wow flipInX" data-wow-delay="0.5s">
+			</div>
+			</div>	
+		</div>
+		<div class="wrapper3">
+			<div class="graycircle">
+				<h3 class="graycircletext">그런데 과연,<br>뱀파이어는 어떻게 되는걸까?<br>그 삶은 어떤 모습일까?<br>이런저런 궁금한 점이 많으실<br>당신을 위해 준비했어요</h3>
+			</div>
+			
+		</div>
+		<div class="wrapper4">
+			<div class="text">
+			<h1 class="wow fadeIn" style="width:550px" id="1">뱀파이어에 관한 모든 것!</h1>
+			</div>
+			<div class="boxes wow fadeInUpBig">
+				<a href="#2"><div class="boxall box1">
+					<h4 class="boxtext">뱀파이어<br>되는 법</h4>
+				</div></a>
+				<a href="#3"><div class="boxall box2">
+					<h4 class="boxtext">신규 뱀파이어를<br>위한 생활 지침서
+					<br>(Q&A)</h4>
+				</div></a>
+				<a href="#4"><div class="boxall box3">
+					<h4 class="boxtext">완전 필수!<br>뱀파이어를 위한
+					<br>아이템 목록</h4>
+				</div></a>
+				<a href="#5"><div class="boxall box4">
+					<h4 class="boxtext">뱀파이어가 되니<br>어떠신가요?
+					<br>많은 이들의<br>솔직 리뷰</h4>
+				</div></a>
+			</div>	
+		</div>
+		<div class="wrapper5"></div>
+		<div class="wrapper6 wow fadeInUpBig"data-wow-delay="0.1s">
+			<div class="flex absolute middlealine ">
+				<div class="boxall box1 wrapper6box z-index1  no-animation">
+					<h4 class="boxtext z-index1" style="text-align: left;">뱀파이어<br>되는 법</h4>
+				</div>
+				<div class="boxall box1 wrapper6box noleftborder  z-index1 no-animation">
+					<h4 class="boxtext glyph z-index1">①</h4>
+				</div>
+
+				
+					<div class="border-radius-box-top htbb1" id="2">
+						<img src="img02.png"style="width:500px; height: 449px; padding-top:60px" class="wow rotateInUpLeft"data-wow-delay="0.3s">
+					</div>
+					<div class="border-radius-box-bottom htbb2">
+						<h3 class="paddingtop25">뱀파이어가 되려면 가장 먼저 전화나 웹사이트로 저희 회사에<br>뱀파이어 메이킹 기사 
+						호출 신청을 해주셔야 합니다.<br>호출 신청이 완료되면 약 1-2시간 내로 기사가
+						자택에 방문할텐데,<br> 그 전에 알콜솜으로 목을 깨끗하게 닦아주세요. </h3>
+					</div>
+				
+			</div>
+		</div>
+		<div>
+			<div class="wrapper7 wow filpInY"data-wow-delay="0.2s">
+				<h4 class="glyph">②</h4>
+				<div class="paddingtop30 flex">
+					<div  style="margin-right: 30px;">
+						<div class="htbb3 border-radius-box-top">
+							<img src="img03.png"style="width:430px; height: auto; padding-top:0px; padding-left:90px" class="wow flipInY">
+						</div>
+						<div class="htbb4 border-radius-box-bottom" style="border-top:0">
+							<h3 class="paddingtop25" style="text-align: center;">
+								기사가 도착하면 먼저 방에 햇빛이 들어오지 못하도록<br>방 안의 모든 커튼을 다 닫고 침대에 누워주세요.
+							</h3>
+						</div>
+					</div>
+					<div>
+						<h4 class="glyph">③</h4>
+						<div class="paddingtop30">
+							<div class="htbb5 border-radius-box-top ">
+								<div style="margin:auto; ">
+									<img src="img04.png" style="width:350px; height: auto; padding-top:50px; padding-left: 25px;" class="wow flipInY" data-wow-delay="1.5s">
+								</div>
+							</div>
+							<div class="htbb6 border-radius-box-bottom" style="border-top:0">
+								<h3 class="paddingtop25" style="text-align: center;">
+								기사가 당신의 목을 앙 물겁니다.<br>당황하지 마세요! <span>필수절차</span>니까요.
+								</h3>
+							</div>
+						</div>
+					</div>	
+				</div>
+				<div class="middlealine">
+					<h4 class="glyph paddingtop150 ">④</h4>
+					<div class="paddingtop30">
+						<div class="htbb7 border-radius-box-top ">
+							<img src="night.png"style="width:500px; height: auto; margin-top:-20px;"class="wow jackInTheBox">
+						</div>
+						<div class="htbb8 border-radius-box-bottom" style="border-top:0">
+							<h3 class="paddingtop25" style="text-align: center;">
+								피나는 목을 지혈하고<br>한숨 푹 주무세요.
+								</h3>
+						</div>
+					</div>
+
+						<h4 class="glyph paddingtop150">⑤</h4>
+						<div class="paddingtop30 wow flipInY ">
+							<div class="htbb7 border-radius-box-top ">
+								<img src="img05.png"style="width:400px; height: auto; padding-top:20px"class="">
+							</div>
+							<div class="htbb8 border-radius-box-bottom" style="border-top:0">
+								<h3 class="paddingtop25" style="text-align: center;">
+								다음날 일어나면 뱀파이어가<br>되어있으실 겁니다. (참 쉽죠?)
+								</h3>
+							</div>
+						</div>
+						<a href="#1"><p>팜플렛 목록으로 돌아가기</p></a>
+						<hr>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="section2" id="3">
+		<div class="wrapper8">
+			<div class="flex paddingtop150">
+				<div class="boxall box2 bottomline nomargin no-animation">
+					<h4 class="boxtext">신규 뱀파이어를<br>위한 생활 지침서<br>(Q&A)</h4>
+				</div>
+				<div class="boxall box2 bottomline noleftborder nomargin no-animation">
+				</div>
+			</div>
+			<div>
+				<div class="pink-q-box absolute wow fadeInRight" style="top:7250px;">
+					<h3 class="qna-text paddingtop25">Q. 영화를 보면 뱀파이어들은 꼭 관에서 자던데,<br>저도 그래야 하나요?</h3>
+				</div>
+			</div>
+			<div class="paddingtop150">
+				<div class="qna-box wow fadeInLeft" data-wow-delay="0.3s">
+					<h3 class="qna-text paddingtop30">A. 꼭 그러실 필요는 없습니다. 햇빛이 들지 않는<br>곳이라면 어디든 OK!입니다!</h3>
+					<hr style="width: 750px; margin-top: 30px">
+					<h5 class="paddingtop30 middlealine">햇빛이 들지 않는 곳의 예시</h5>
+					<img src="sleep.png"style="width:700px; height: auto; margin-top:-170px; padding-left:20px; display: flex;">
+					<div class="flex middlealine" style="position: relative; top:-180px">
+						<h5 class="margin-side" style="width:200px">장롱 안</h5>
+						<h5 class="margin-side"style="width:200px">화장실</h5>
+						<h5 class="margin-side"style="width:200px">청소도구함</h5>
+					</div>
+				</div>
+			</div>
+			<div class="paddingtop150">
+				<div class="pink-q-box wow fadeInLeft">
+					<h3 class="qna-text paddingtop25">Q. 뱀파이어의 주식은 사람의 피잖아요,<br>그건 어떻게 구하나요? 사냥하긴 무서워요!</h3>
+				</div>
+			</div>
+			<div class="paddingtop50" >
+				<div class="qna-box wow fadeInRight"data-wow-delay="0.3s" style="margin-left: auto;">
+					<h3 class="qna-text paddingtop30">A. 걱정마세요. 저희 회사에서는 뱀파이어 고객님들을<br>위한 혈액팩 정기 배달 서비스를 제공합니다.</h3>
+					<hr style="width: 750px; margin-top: 30px">
+					<img src="blood.png"style="width:500px; height: auto; margin-top:-60px; padding-left:110px">
+						<h5 style="width:400px; margin-top:-50px; position:relative; padding-left: 250px;">(정기 배송료 월 49,500원)</h5>
+				</div>
+			</div>
+			<div class="paddingtop150">
+				<div class="pink-q-box wow rotateInUpLeft"style="margin:auto">
+					<h3 class="qna-text paddingtop25" >Q. 마늘 먹어도 되나요? 그리고 제가 카톨릭인데,<br>이제 성당은 못가는 건가요?</h3>
+				</div>
+			</div>
+			<div class="paddingtop50">
+				<div class="qna-box  wow rotateInUpRight"data-wow-delay="0.3s" style="margin:auto">
+					<h3 class="qna-text paddingtop30">A. 마늘 하루 5알 이하로 섭취 가능하십니다. <br>(그 이상 드실 시 구마당하십니다.)<br>종교는 불교로 개종 권장드립니다.</h3>
+					<hr style="width: 750px; margin-top: 30px">
+					<img src="buda.png"style="width:400px; margin-top:-20px; position:relative; padding-left: 175px;">
+
+				</div>
+			</div>
+			<a href="#1"><p>팜플렛 목록으로 돌아가기</p></a>
+					
+			
+		</div>
+
+		
+
+	</section>
+
+	<section class="section3" id="4">
+		<div class="wrapperitem">
+			<div class="paddingtop150">
+			<h4 class="boxtext whitetext itemtitle">완전 필수!<br>뱀파이어를 위한<br>아이템 목록</h4>
+			</div>
+			<div class="item-container">
+				<div class="pinkitembox">
+					<div class="pagebutton1"><div style="padding-top:7px"><</div></div>
+						<div class="pagebutton2"><div style="padding-top:7px"><</div></div>
+					<img src="tooth.png"style="width:600px; height: auto; margin-top:-20px; mix-blend-mode:normal; rotate:180deg; padding-right:100px; filter: drop-shadow(-2px -4px 5px rgba(0, 0, 0, 0.5));">
+			
+				</div>
+				<div class="grayitembox">
+					<h3 class="tooth">송곳니 칫솔</h3>
+					<h3 class="tooth2" style="font-size: 1.3em; margin-top:-10px">송곳니를 닦기 간편하게 만든 뱀파이어 전용 칫솔이다.<br>가격 2만 6천원</h3>
+			
+				</div>
+			</div>
+		</div>
+		<div style="width: 1040px; margin:auto">
+			<a href="#1"><p style="color:white; margin-left:auto;">팜플렛 목록으로 돌아가기</p></a>
+		</div>
+	</section>
+	<section class="section4" id="5">
+		<div class="wrapper9">
+			<div class="paddingtop150">
+				<div class="boxall box4 bottomline" style="margin:auto;">
+					<h4 class="boxtext">뱀파이어가 되니<br>어떠신가요?
+					<br>많은 이들의<br>솔직 리뷰</h4>
+				</div>
+				<div class="flex" style="justify-content: center; padding-top: 100px;">
+					<img class=" letter" src="letter1.png">
+					<img class=" letter2" src="letter2.png">
+
+					<img class=" letter" src="letter1.png">
+					<img class=" letter2" src="letter2.png">
+
+					<img class=" letter" src="letter1.png">
+					<img class=" letter2" src="letter2.png">
+				</div>
+				<div class="flex" style="justify-content: center; padding-top: 40px;">
+					<a href="naver.com" id="letter1"></a>	
+					<a href="naver.com" id="letter1"></a>	
+					<a href="naver.com" id="letter1"></a>	
+				</div>
+				<div class="flex" style="justify-content: center; padding-top: 40px;">
+					<a href="naver.com" id="letter1"></a>	
+					<a href="naver.com" id="letter1"></a>	
+					<a href="naver.com" id="letter1"></a>	
+				</div>
+				<a href="#1"><p>팜플렛 목록으로 돌아가기</p></a>
+
+			</div>
+
+
+
+	</section>
+		
+
+
+	
+
+
+
+
+
+
+
+
+
+	
+
+</body>
+</html>
